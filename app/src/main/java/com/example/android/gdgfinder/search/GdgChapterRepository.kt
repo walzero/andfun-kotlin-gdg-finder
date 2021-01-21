@@ -17,7 +17,7 @@ class GdgChapterRepository(gdgApiService: GdgApiService) {
      * A single network request, the results won't change. For this lesson we did not add an offline cache for simplicity
      * and the result will be cached in memory.
      */
-    private val request = gdgApiService.getChapters()
+    private val request = gdgApiService.getChaptersAsync()
 
     /**
      * An in-progress (or potentially completed) sort, this may be null or cancelled at any time.

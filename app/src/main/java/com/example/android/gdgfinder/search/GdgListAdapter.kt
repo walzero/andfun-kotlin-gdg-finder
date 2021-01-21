@@ -9,7 +9,7 @@ import com.example.android.gdgfinder.network.GdgChapter
 import com.example.android.gdgfinder.search.GdgListAdapter.GdgListViewHolder
 import com.example.android.gdgfinder.databinding.ListItemBinding
 
-class GdgListAdapter(val clickListener: GdgClickListener): ListAdapter<GdgChapter, GdgListViewHolder>(DiffCallback){
+class GdgListAdapter(private val clickListener: GdgClickListener): ListAdapter<GdgChapter, GdgListViewHolder>(DiffCallback){
     companion object DiffCallback : DiffUtil.ItemCallback<GdgChapter>() {
         override fun areItemsTheSame(oldItem: GdgChapter, newItem: GdgChapter): Boolean {
             return oldItem === newItem
